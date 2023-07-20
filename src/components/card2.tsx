@@ -1,18 +1,18 @@
 import Image, { StaticImageData } from "next/image" 
 
 
-interface CardProps{
+interface Card2{
    title: string; 
     img: StaticImageData; 
     price: string
     
 }
 
-export function Card({ title, img, price} : CardProps){
+export function Card2({ title, img, price} : Card2){
     return(
-        <div className="w-[120px] h-[180px] m-5 bg-[#FEF3DD] rounded-[5px]">
+        <div className="w-[120px] h-[180px] m-5 bg-[#FEF3DD] rounded-[5px] items-center">
           <div className="w-[120px] h-[120px] flex-row items-center">
-            <Image src={img} alt={"imagem"}></Image>
+            <Image className=" h-[125px] flex justify-center items-center" src={img} alt={"imagem"}></Image>
           </div>
           <div className="w-[120px] h-[60px]">
             <a className="text-[9px] ml-[2px] font-bold">{title}</a>
